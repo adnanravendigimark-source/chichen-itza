@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bosphorus Boat Cruise Tickets — Homepage (Next.js)
 
-## Getting Started
+A GetYourGuide affiliate site for Bosphorus sightseeing cruise tickets — a
+tour-first homepage (hero, trust badges, tour grid, price comparison, FAQ
+with schema) plus a full `/admin` content CMS, targeting the focus keyword
+"Bosphorus Sightseeing Cruise Tour" in the title/H1/meta. Day and afternoon
+cruises only, by design — there are no night or dinner cruise products or
+copy anywhere on this site.
 
-First, run the development server:
+## 1. Install & run locally
+
+Requires Node.js 18.17+.
 
 ```bash
+cd bosphorus-boat-cruise
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. The site works immediately with real starter
+content (4 cruise products, FAQs, 3 blog posts) even before you set up a
+database — see "Content storage" below.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 2. Add your real GetYourGuide affiliate link
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open `lib/data.ts` and replace:
 
-## Learn More
+```ts
+export const PARTNER_ID = process.env.GYG_PARTNER_ID || "YOUR_PARTNER_ID";
+```
 
-To learn more about Next.js, take a look at the following resources:
+with your actual GetYourGuide partner ID (either directly here, or via the
+`GYG_PARTNER_ID` value in `.env`). Every "Book Now" button reads from this
+one constant. Once you're logged into `/admin`, you can also edit each
+tour's GetYourGuide link path directly from the Tours & Tickets page — no
+code changes needed for day-to-day edits.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 3. Content storage (database is optional to get started)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All admin-editable content (tours, posts, homepage copy, FAQs, users) is
+designed to live in Neon Postgres so a non-technical editor can change it
+from `/admin` with the change going live immediately — no rebuild or
+redeploy.
 
-## Deploy on Vercel
+**Until you set up a database, the site falls back to the real Bosphorus
+Boat Cruise starter content baked into `/data` (tours, FAQs, homepage copy,
+and 3 blog posts)** — so it's fully browsable and demo-ready out of the box.
+Saving changes from `/admin` won't persist anywhere until `DATABASE_URL` is
+set, though — the admin panel will show a "couldn't be reached" error on
+save until then.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To turn on the live CMS:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Create a free project at [neon.tech](https://neon.tech).
+2. Copy Connection Details → "Pooled connection" string into `DATABASE_URL`
+   in `.env`.
+3. Also add the same `DATABASE_URL` to your Vercel project's Settings →
+   Environment Variables (all environments) before deploying.
+4. Run: `node scripts/setup-db.mjs` — creates the tables and seeds them
+   from the `/data/*.json` files (safe to re-run; only seeds empty tables).
+5. Redeploy.
+
+## 4. Admin CMS
+
+Visit `/admin/login`. The owner account is whatever you set
+`ADMIN_EMAIL` / `ADMIN_PASSWORD` to in `.env` — there is no built-in
+default, so both must be set or the owner account can't log in. From
+there you can add editor accounts with access to specific sections (Tours,
+Blog Posts, FAQs, Homepage, Privacy Policy, or About/Contact/Blog SEO) from
+the Users page.
+
+## 5. Photography
+
+The hero and tour photography use real, free-to-use photos of the Bosphorus,
+Istanbul's skyline, and Ottoman-era waterfront landmarks from Unsplash (free
+for commercial use, no attribution required — credits are in a code comment
+at the top of `components/Hero.tsx`). Swap in your own or licensed photos
+of the actual boats/operators you're promoting whenever you have them —
+nothing beats real photos of the actual cruise.
+
+## 6. Before you launch
+
+A few placeholders need your own real values before this goes live:
+
+- `lib/site.ts` → `SITE_URL` — set to whatever domain you actually connect
+  in Vercel (a placeholder domain is set for now).
+- `app/layout.tsx` → the `G-XXXXXXXXXX` Google Analytics ID (two spots) —
+  replace with this site's own GA4 measurement ID. Don't reuse another
+  site's ID, or you'll mix both sites' traffic together.
+- `.env` → `ADMIN_EMAIL` / `ADMIN_PASSWORD` / `ADMIN_SESSION_SECRET` /
+  `DATABASE_URL` / `GYG_PARTNER_ID` (see the comments in that file).
+
+## 7. Deploying
+
+Standard Next.js App Router project — deploys as-is to Vercel, Netlify, or
+any Node host. `npm run build && npm run start` for a production build.
+# bosphorus-sightseeing
+# bosphorus-sightseeing
