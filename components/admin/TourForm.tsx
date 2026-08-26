@@ -109,7 +109,7 @@ export default function TourForm({
             value={tour.id}
             onChange={(e) => update("id", e.target.value)}
             className={`${inputClass} ${!isNew ? "bg-stone-100 text-stone-500" : ""}`}
-            placeholder="e.g. bosphorus-short-circle-cruise"
+            placeholder="e.g. chichen-itza-guided-day-trip"
           />
         </div>
         <div>

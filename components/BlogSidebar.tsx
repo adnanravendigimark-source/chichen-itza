@@ -19,7 +19,7 @@ export default function BlogSidebar({
   toc,
   tocLabel = "In This Guide",
   relatedHeading = "Popular Guides",
-  compareLinkText = "Compare Bosphorus Cruises →",
+  compareLinkText = "Compare Chichen Itza Tours →",
   recommendedBadge,
 }: {
   slug: string;
@@ -123,7 +123,7 @@ export default function BlogSidebar({
           <TicketIcon className="h-5 w-5" />
         </div>
         <p className="mt-3.5 font-display text-base font-bold text-white">
-          Compare Bosphorus Cruises &amp; Tickets
+          Compare Chichen Itza Tours &amp; Tickets
         </p>
         <p className="mt-1.5 text-xs leading-relaxed text-white/80">
           Find the best cruise options, departure times and prices in one place.

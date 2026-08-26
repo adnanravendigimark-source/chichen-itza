@@ -17,9 +17,9 @@ export interface BlogSeoSettings {
 }
 
 const DEFAULT_SETTINGS: BlogSeoSettings = {
-  metaTitle: "Bosphorus Cruise Guides & Tips | Bosphorus Boat Cruise Tickets",
+  metaTitle: "Chichen Itza Guides & Tips | Chichen Itza Tour & Tickets",
   metaDescription:
-    "Practical guides for a Bosphorus sightseeing cruise in Istanbul — Short Circle vs. full-day cruise, best time to go, and more.",
+    "Practical guides for touring Chichen Itza in Yucatan — guided vs. self-guided tours, best time to go, cenote add-ons, and more.",
   canonicalUrl: "",
   noIndex: false,
   noFollow: false,

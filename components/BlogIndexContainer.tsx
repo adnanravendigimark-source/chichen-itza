@@ -37,7 +37,7 @@ export default function BlogIndexContainer({
         <div className="mb-6">
           <h2 className="font-display text-2xl font-bold text-bosphorus-navy sm:text-3xl">Latest Guides</h2>
           <p className="mt-1.5 text-xs text-bosphorus-charcoal/80 sm:text-sm">
-            Expert tips, travel guides and everything you need to know about Bosphorus cruises in Istanbul.
+            Expert tips, travel guides and everything you need to know about touring Chichen Itza in Yucatan.
           </p>
         </div>
 

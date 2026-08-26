@@ -21,7 +21,7 @@ export default async function AdminDashboardLayout({ children }: { children: Rea
       pages={pages}
       sessionEmail={session?.email}
       sessionRole={session?.role}
-      brandName="Bosphorus Cruise"
+      brandName="Chichen Itza Tour"
       brandColorClass="text-bosphorus-gold"
       avatarColorClass="bg-bosphorus-charcoal"
     >
