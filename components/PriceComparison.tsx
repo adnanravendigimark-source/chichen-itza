@@ -13,10 +13,10 @@ export default async function PriceComparison() {
   return (
     <section id="prices" className="mx-auto max-w-7xl px-4 py-20 sm:px-8 sm:py-24">
       <div className="max-w-2xl">
-        <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-bosphorus-gold">
+        <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-chichen-gold">
           {s.eyebrow}
         </span>
-        <h2 className="mt-2.5 font-display text-2xl sm:text-3xl lg:text-[2.15rem] font-bold text-bosphorus-navy leading-[1.2] tracking-tight">
+        <h2 className="mt-2.5 font-display text-2xl sm:text-3xl lg:text-[2.15rem] font-bold text-chichen-navy leading-[1.2] tracking-tight">
           {s.heading}
         </h2>
         <div
@@ -28,7 +28,7 @@ export default async function PriceComparison() {
       <div className="mt-10 overflow-x-auto rounded-2xl border border-stone-200 bg-white shadow-sm">
         <table className="w-full min-w-[700px] border-collapse text-left text-sm">
           <thead>
-            <tr className="bg-bosphorus-navy text-white">
+            <tr className="bg-chichen-navy text-white">
               <th className="px-6 py-4 font-semibold text-[11px] uppercase tracking-wider">{s.itemLabel}</th>
               <th className="px-6 py-4 font-semibold text-[11px] uppercase tracking-wider">{s.priceLabel}</th>
               <th className="px-6 py-4 font-semibold text-[11px] uppercase tracking-wider">{s.column1Label}</th>
@@ -45,8 +45,8 @@ export default async function PriceComparison() {
                   tour.featured ? "bg-amber-50/40 font-medium" : i % 2 ? "bg-stone-50/50" : ""
                 }`}
               >
-                <td className="px-6 py-4 font-semibold text-bosphorus-navy">{tour.title}</td>
-                <td className="px-6 py-4 font-bold text-bosphorus-gold">
+                <td className="px-6 py-4 font-semibold text-chichen-navy">{tour.title}</td>
+                <td className="px-6 py-4 font-bold text-chichen-gold">
                   €{tour.price} <span className="font-normal text-xs text-stone-900/60">/ person</span>
                 </td>
                 <td className="px-6 py-4 text-stone-900/80">{tour.priceTableColumn1 || tour.duration}</td>
@@ -57,7 +57,7 @@ export default async function PriceComparison() {
                     href={tour.href}
                     target="_blank"
                     rel="noopener nofollow sponsored"
-                    className="inline-flex rounded-lg bg-bosphorus-navy px-4 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-bosphorus-navy/90"
+                    className="inline-flex rounded-lg bg-chichen-navy px-4 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-chichen-navy/90"
                   >
                     {s.bookLabel}
                   </a>

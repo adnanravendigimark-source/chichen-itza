@@ -97,7 +97,7 @@ export default function ImageUploadField({
           onChange={(e) => onChange(e.target.value)}
           onBlur={(e) => recordMediaUrl(e.target.value)}
           placeholder="https://... or upload a file"
-          className="w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-bosphorus-navy focus:outline-none focus:ring-1 focus:ring-bosphorus-navy"
+          className="w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-chichen-navy focus:outline-none focus:ring-1 focus:ring-chichen-navy"
         />
         <button
           type="button"

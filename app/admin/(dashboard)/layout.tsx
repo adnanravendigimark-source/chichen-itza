@@ -22,8 +22,8 @@ export default async function AdminDashboardLayout({ children }: { children: Rea
       sessionEmail={session?.email}
       sessionRole={session?.role}
       brandName="Chichen Itza Tour"
-      brandColorClass="text-bosphorus-gold"
-      avatarColorClass="bg-bosphorus-charcoal"
+      brandColorClass="text-chichen-gold"
+      avatarColorClass="bg-chichen-charcoal"
     >
       {children}
     </AdminShell>

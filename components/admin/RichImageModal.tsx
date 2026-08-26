@@ -115,7 +115,7 @@ export default function RichImageModal({
             {isEditing ? "Edit Image Details" : "Insert image"}
           </h3>
           {isEditing && (
-            <span className="rounded-full bg-bosphorus-navy/10 px-2.5 py-0.5 text-xs font-semibold text-bosphorus-navy">
+            <span className="rounded-full bg-chichen-navy/10 px-2.5 py-0.5 text-xs font-semibold text-chichen-navy">
               Editing Image
             </span>
           )}
@@ -132,7 +132,7 @@ export default function RichImageModal({
             value={url}
             onChange={(e) => setUrl(e.target.value)}
             placeholder="https://... or upload a file"
-            className="w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-bosphorus-navy focus:outline-none focus:ring-1 focus:ring-bosphorus-navy"
+            className="w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-chichen-navy focus:outline-none focus:ring-1 focus:ring-chichen-navy"
           />
           <button
             type="button"
@@ -199,7 +199,7 @@ export default function RichImageModal({
             value={alt}
             onChange={(e) => setAlt(e.target.value)}
             placeholder="Describe what is shown in the image (e.g. El Castillo pyramid at Chichen Itza during sunrise)"
-            className="w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-bosphorus-navy focus:outline-none focus:ring-1 focus:ring-bosphorus-navy"
+            className="w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-chichen-navy focus:outline-none focus:ring-1 focus:ring-chichen-navy"
           />
         </div>
 
@@ -212,7 +212,7 @@ export default function RichImageModal({
             value={caption}
             onChange={(e) => setCaption(e.target.value)}
             placeholder="Shown under the photo on the article"
-            className="w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-bosphorus-navy focus:outline-none focus:ring-1 focus:ring-bosphorus-navy"
+            className="w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-chichen-navy focus:outline-none focus:ring-1 focus:ring-chichen-navy"
           />
         </div>
 
@@ -241,7 +241,7 @@ export default function RichImageModal({
               type="button"
               onClick={handleSave}
               disabled={!url || uploading}
-              className="rounded-lg bg-bosphorus-navy px-4 py-2 text-sm font-semibold text-white transition hover:bg-bosphorus-navy/90 disabled:opacity-60"
+              className="rounded-lg bg-chichen-navy px-4 py-2 text-sm font-semibold text-white transition hover:bg-chichen-navy/90 disabled:opacity-60"
             >
               {isEditing ? "Save changes" : "Insert image"}
             </button>

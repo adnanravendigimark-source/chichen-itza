@@ -39,7 +39,7 @@ const config: Config = {
           dark: "#073B2A",
         },
         // Compatibility aliases for site components
-        bosphorus: {
+        chichen: {
           navy: "rgb(var(--color-maya-forest) / <alpha-value>)",
           ottoman: "#145A43",
           gold: "rgb(var(--color-maya-gold) / <alpha-value>)",

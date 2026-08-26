@@ -24,7 +24,7 @@ import type {
 import type { Tour } from "@/lib/data";
 
 const inputClass =
-  "w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-bosphorus-navy focus:outline-none focus:ring-1 focus:ring-bosphorus-navy";
+  "w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-chichen-navy focus:outline-none focus:ring-1 focus:ring-chichen-navy";
 const labelClass = "mb-1 block text-sm font-medium text-stone-700";
 const hintClass = "mt-1 text-xs text-stone-500";
 
@@ -305,7 +305,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
             onClick={() => setActiveTab(tab.key)}
             className={`flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-sm font-medium transition ${
               activeTab === tab.key
-                ? "bg-bosphorus-navy text-white shadow-sm"
+                ? "bg-chichen-navy text-white shadow-sm"
                 : "text-stone-600 hover:bg-stone-100"
             }`}
           >
@@ -723,7 +723,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
                           <td className="px-3 py-2 text-stone-700">{tour.priceTableFeature || "No"}</td>
                           <td className="px-3 py-2 text-stone-700">{tour.bestFor}</td>
                           <td className="px-3 py-2 text-right">
-                            <Link href={`/admin/tours/${tour.id}`} className="font-medium text-bosphorus-navy hover:underline">
+                            <Link href={`/admin/tours/${tour.id}`} className="font-medium text-chichen-navy hover:underline">
                               Edit →
                             </Link>
                           </td>

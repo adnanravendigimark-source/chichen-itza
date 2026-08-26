@@ -40,7 +40,7 @@ export default function SaveBar({
         <button
           type="submit"
           disabled={saving || disabled}
-          className="rounded-lg bg-bosphorus-gold px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-bosphorus-gold/90 disabled:opacity-60"
+          className="rounded-lg bg-chichen-gold px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-chichen-gold/90 disabled:opacity-60"
         >
           {saving ? savingLabel : label}
         </button>

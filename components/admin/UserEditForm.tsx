@@ -7,7 +7,7 @@ import type { SafeUser } from "@/lib/users";
 import PasswordStrengthField from "./PasswordStrengthField";
 
 const inputClass =
-  "w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-bosphorus-navy focus:outline-none focus:ring-1 focus:ring-bosphorus-navy";
+  "w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-chichen-navy focus:outline-none focus:ring-1 focus:ring-chichen-navy";
 const labelClass = "mb-1 block text-sm font-medium text-stone-700";
 
 export default function UserEditForm({ user, onCancel }: { user: SafeUser; onCancel?: () => void }) {
@@ -126,7 +126,7 @@ export default function UserEditForm({ user, onCancel }: { user: SafeUser; onCan
                   type="checkbox"
                   checked={pages.includes(key)}
                   onChange={() => togglePage(key)}
-                  className="h-[18px] w-[18px] rounded border-stone-300 text-bosphorus-gold focus:ring-bosphorus-navy"
+                  className="h-[18px] w-[18px] rounded border-stone-300 text-chichen-gold focus:ring-chichen-navy"
                 />
                 {PAGE_LABELS[key]}
               </label>
@@ -179,7 +179,7 @@ export default function UserEditForm({ user, onCancel }: { user: SafeUser; onCan
         <button
           type="submit"
           disabled={saving || !!pwError || !!confirmError}
-          className="rounded-lg bg-bosphorus-gold px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-bosphorus-gold/90 disabled:opacity-60"
+          className="rounded-lg bg-chichen-gold px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-chichen-gold/90 disabled:opacity-60"
         >
           {saving ? "Saving…" : "Save Changes"}
         </button>

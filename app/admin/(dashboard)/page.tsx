@@ -75,9 +75,9 @@ export default async function AdminDashboardPage() {
             <Link
               key={card.href}
               href={card.href}
-              className="group flex items-start gap-4 rounded-2xl border border-stone-200 bg-white p-5 transition hover:border-bosphorus-gold/40 hover:shadow-sm"
+              className="group flex items-start gap-4 rounded-2xl border border-stone-200 bg-white p-5 transition hover:border-chichen-gold/40 hover:shadow-sm"
             >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-stone-100 text-stone-500 transition group-hover:bg-bosphorus-gold/10 group-hover:text-bosphorus-gold">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-stone-100 text-stone-500 transition group-hover:bg-chichen-gold/10 group-hover:text-chichen-gold">
                 <Icon className="h-5 w-5" />
               </span>
               <span>
@@ -101,9 +101,9 @@ export default async function AdminDashboardPage() {
           <div className="mt-3 grid gap-4 sm:grid-cols-2">
             <Link
               href={indexingCard.href}
-              className="group flex items-start gap-4 rounded-2xl border border-stone-200 bg-white p-5 transition hover:border-bosphorus-gold/40 hover:shadow-sm"
+              className="group flex items-start gap-4 rounded-2xl border border-stone-200 bg-white p-5 transition hover:border-chichen-gold/40 hover:shadow-sm"
             >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-stone-100 text-stone-500 transition group-hover:bg-bosphorus-gold/10 group-hover:text-bosphorus-gold">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-stone-100 text-stone-500 transition group-hover:bg-chichen-gold/10 group-hover:text-chichen-gold">
                 <indexingCard.icon className="h-5 w-5" />
               </span>
               <span>

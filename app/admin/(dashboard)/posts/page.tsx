@@ -20,7 +20,7 @@ export default async function AdminPostsPage() {
         </div>
         <Link
           href="/admin/posts/new"
-          className="rounded-lg bg-bosphorus-gold px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-bosphorus-gold/90"
+          className="rounded-lg bg-chichen-gold px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-chichen-gold/90"
         >
           + New Post
         </Link>
@@ -50,7 +50,7 @@ export default async function AdminPostsPage() {
             </Link>
             <Link
               href={`/admin/posts/${post.slug}`}
-              className="shrink-0 text-sm font-medium text-bosphorus-navy hover:underline"
+              className="shrink-0 text-sm font-medium text-chichen-navy hover:underline"
             >
               Edit
             </Link>

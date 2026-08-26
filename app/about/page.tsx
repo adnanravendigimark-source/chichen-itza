@@ -46,7 +46,7 @@ export default async function AboutPage() {
         {/* Hero banner — light background with the hero photo bled in from
             the right and a soft gradient wash (left-aligned copy, image
             never fully hides the text at any breakpoint). */}
-        <section className="relative overflow-hidden bg-white border-b border-bosphorus-sand/40">
+        <section className="relative overflow-hidden bg-white border-b border-chichen-sand/40">
           <div className="absolute inset-0 z-0 pointer-events-none">
             <SafeImage
               src={about.heroImage}
@@ -62,33 +62,33 @@ export default async function AboutPage() {
 
           <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-8 pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-20 lg:pb-24">
             <div className="max-w-2xl">
-              <nav aria-label="Breadcrumb" className="text-xs font-medium text-bosphorus-charcoal/70">
+              <nav aria-label="Breadcrumb" className="text-xs font-medium text-chichen-charcoal/70">
                 <ol className="flex items-center gap-1.5">
                   <li>
-                    <Link href="/" className="hover:text-bosphorus-gold transition-colors">
+                    <Link href="/" className="hover:text-chichen-gold transition-colors">
                       Home
                     </Link>
                   </li>
-                  <li className="text-bosphorus-charcoal/40">&gt;</li>
-                  <li className="font-semibold text-bosphorus-navy" aria-current="page">
+                  <li className="text-chichen-charcoal/40">&gt;</li>
+                  <li className="font-semibold text-chichen-navy" aria-current="page">
                     About Us
                   </li>
                 </ol>
               </nav>
 
-              <span className="mt-4 inline-block text-xs font-bold uppercase tracking-widest text-bosphorus-gold">
+              <span className="mt-4 inline-block text-xs font-bold uppercase tracking-widest text-chichen-gold">
                 {about.heroEyebrow}
               </span>
 
-              <h1 className="mt-2 font-display text-3xl font-bold tracking-tight text-bosphorus-navy sm:text-4xl lg:text-5xl">
+              <h1 className="mt-2 font-display text-3xl font-bold tracking-tight text-chichen-navy sm:text-4xl lg:text-5xl">
                 {about.heroHeading}
               </h1>
 
               {/* Gold accent line */}
-              <div className="mt-3.5 mb-4 h-[2.5px] w-12 rounded-full bg-bosphorus-gold" />
+              <div className="mt-3.5 mb-4 h-[2.5px] w-12 rounded-full bg-chichen-gold" />
 
               <div
-                className="rich-content mt-3 text-xs leading-relaxed text-bosphorus-charcoal/85 sm:text-sm"
+                className="rich-content mt-3 text-xs leading-relaxed text-chichen-charcoal/85 sm:text-sm"
                 dangerouslySetInnerHTML={{ __html: about.heroSubheading }}
               />
             </div>
@@ -99,7 +99,7 @@ export default async function AboutPage() {
             just like a blog post (see lib/about.ts's `content` field). */}
         <div className="mx-auto max-w-4xl px-4 py-14 sm:px-6 sm:py-20">
           <div
-            className="rich-content text-sm sm:text-[15px] leading-relaxed text-bosphorus-charcoal/85"
+            className="rich-content text-sm sm:text-[15px] leading-relaxed text-chichen-charcoal/85"
             dangerouslySetInnerHTML={{ __html: about.content }}
           />
         </div>

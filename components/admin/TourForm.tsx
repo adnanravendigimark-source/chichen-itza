@@ -9,7 +9,7 @@ import { useToast } from "./Toast";
 import type { TourRecord, TourType } from "@/lib/data";
 
 const inputClass =
-  "w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-bosphorus-navy focus:outline-none focus:ring-1 focus:ring-bosphorus-navy";
+  "w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-chichen-navy focus:outline-none focus:ring-1 focus:ring-chichen-navy";
 const labelClass = "mb-1 block text-sm font-medium text-stone-700";
 
 export default function TourForm({

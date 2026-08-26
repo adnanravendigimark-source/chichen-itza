@@ -13,7 +13,7 @@ export default function AdminLoginPage() {
         <p className="text-center font-display text-lg font-bold text-stone-900">
           Chichen Itza Tour & Tickets
         </p>
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-bosphorus-gold">
+        <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-chichen-gold">
           Content Admin
         </p>
         <div className="mt-6">

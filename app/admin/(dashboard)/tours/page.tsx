@@ -20,7 +20,7 @@ export default async function AdminToursPage() {
         </div>
         <Link
           href="/admin/tours/new"
-          className="rounded-lg bg-bosphorus-gold px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-bosphorus-gold/90"
+          className="rounded-lg bg-chichen-gold px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-chichen-gold/90"
         >
           + Add Tour
         </Link>
@@ -43,7 +43,7 @@ export default async function AdminToursPage() {
             </div>
             <Link
               href={`/admin/tours/${tour.id}`}
-              className="shrink-0 text-sm font-medium text-bosphorus-navy hover:underline"
+              className="shrink-0 text-sm font-medium text-chichen-navy hover:underline"
             >
               Edit
             </Link>

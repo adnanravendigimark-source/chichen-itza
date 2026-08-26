@@ -167,7 +167,7 @@ export default function CropModal({
   }
 
   const handleClass =
-    "absolute h-4 w-4 rounded-full border-2 border-white bg-bosphorus-navy shadow touch-none";
+    "absolute h-4 w-4 rounded-full border-2 border-white bg-chichen-navy shadow touch-none";
 
   return (
     <div
@@ -255,7 +255,7 @@ export default function CropModal({
             type="button"
             onClick={handleSave}
             disabled={!ready || saving}
-            className="rounded-lg bg-bosphorus-navy px-4 py-2 text-sm font-semibold text-white transition hover:bg-bosphorus-navy/90 disabled:opacity-60"
+            className="rounded-lg bg-chichen-navy px-4 py-2 text-sm font-semibold text-white transition hover:bg-chichen-navy/90 disabled:opacity-60"
           >
             {saving ? "Saving…" : "Save crop"}
           </button>

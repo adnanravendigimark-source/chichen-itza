@@ -34,9 +34,9 @@ body {
 
   /* Compatibility aliases */
   --color-maya-emerald: var(--color-maya-forest);
-  --color-bosphorus-navy: var(--color-maya-forest);
-  --color-bosphorus-gold: var(--color-maya-gold);
-  --color-bosphorus-charcoal: var(--color-maya-charcoal);
+  --color-chichen-navy: var(--color-maya-forest);
+  --color-chichen-gold: var(--color-maya-gold);
+  --color-chichen-charcoal: var(--color-maya-charcoal);
 }
 
 /* Shared typography for admin-entered rich text */

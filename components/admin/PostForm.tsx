@@ -15,7 +15,7 @@ import type { Tour } from "@/lib/data";
 import type { PostRedirectRow } from "@/lib/redirects";
 
 const inputClass =
-  "w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-bosphorus-navy focus:outline-none focus:ring-1 focus:ring-bosphorus-navy";
+  "w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-chichen-navy focus:outline-none focus:ring-1 focus:ring-chichen-navy";
 const labelClass = "mb-1 block text-sm font-medium text-stone-700";
 const hintClass = "mt-1 text-xs text-stone-500";
 
@@ -200,7 +200,7 @@ export default function PostForm({
                 type="button"
                 onClick={() => setActiveTab(tab.key)}
                 className={`flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-sm font-medium transition ${
-                  activeTab === tab.key ? "bg-bosphorus-navy text-white shadow-sm" : "text-stone-600 hover:bg-stone-100"
+                  activeTab === tab.key ? "bg-chichen-navy text-white shadow-sm" : "text-stone-600 hover:bg-stone-100"
                 }`}
               >
                 <span aria-hidden="true">{tab.icon}</span>
@@ -368,10 +368,10 @@ export default function PostForm({
               <Field label="Button link" hint="A relative path (e.g. /#tours) or a full https:// URL.">
                 <input value={post.ctaButtonHref} onChange={(e) => update("ctaButtonHref", e.target.value)} className={inputClass} />
               </Field>
-              <div className="rounded-2xl border border-bosphorus-navy/20 bg-bosphorus-navy/5 p-6">
+              <div className="rounded-2xl border border-chichen-navy/20 bg-chichen-navy/5 p-6">
                 <p className="text-sm font-semibold text-stone-900">{post.ctaHeading || "Ready to book?"}</p>
                 <p className="mt-1 text-sm text-stone-900/70">{post.ctaBody}</p>
-                <span className="mt-4 inline-flex rounded-full bg-bosphorus-gold px-5 py-2.5 text-sm font-semibold text-white">
+                <span className="mt-4 inline-flex rounded-full bg-chichen-gold px-5 py-2.5 text-sm font-semibold text-white">
                   {post.ctaButtonText || "See Price Comparison"}
                 </span>
               </div>

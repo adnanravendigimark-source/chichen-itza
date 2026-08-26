@@ -49,7 +49,7 @@ export default function RichLinkModal({
             }
           }}
           placeholder="example.com or /blog/other-post"
-          className="mt-4 w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-bosphorus-navy focus:outline-none focus:ring-1 focus:ring-bosphorus-navy"
+          className="mt-4 w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-chichen-navy focus:outline-none focus:ring-1 focus:ring-chichen-navy"
         />
 
         <div className="mt-4">
@@ -106,7 +106,7 @@ export default function RichLinkModal({
             type="button"
             onClick={handleInsert}
             disabled={!url.trim()}
-            className="rounded-lg bg-bosphorus-navy px-4 py-2 text-sm font-semibold text-white transition hover:bg-bosphorus-navy/90 disabled:opacity-60"
+            className="rounded-lg bg-chichen-navy px-4 py-2 text-sm font-semibold text-white transition hover:bg-chichen-navy/90 disabled:opacity-60"
           >
             Insert link
           </button>

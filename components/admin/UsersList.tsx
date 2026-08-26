@@ -44,7 +44,7 @@ export default function UsersList({
               <button
                 type="button"
                 onClick={() => setEditing(user)}
-                className="text-sm font-medium text-bosphorus-navy hover:underline"
+                className="text-sm font-medium text-chichen-navy hover:underline"
               >
                 Edit
               </button>

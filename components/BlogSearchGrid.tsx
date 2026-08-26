@@ -75,12 +75,12 @@ export default function BlogSearchGrid({
   return (
     <div>
       {/* Header bar: Count & Sort */}
-      <div className="flex flex-wrap items-center justify-between gap-4 border-b border-bosphorus-sand/60 pb-4">
-        <p className="text-xs font-medium text-bosphorus-charcoal/80">
+      <div className="flex flex-wrap items-center justify-between gap-4 border-b border-chichen-sand/60 pb-4">
+        <p className="text-xs font-medium text-chichen-charcoal/80">
           Showing {sortedPosts.length === 0 ? 0 : start + 1} –{" "}
           {Math.min(start + PAGE_SIZE, sortedPosts.length)} of {sortedPosts.length} articles
           {selectedCategory && selectedCategory !== "All" && (
-            <span className="ml-2 inline-flex items-center gap-1 rounded-md bg-bosphorus-sky border border-bosphorus-sand/60 px-2 py-0.5 text-[11px] font-semibold text-bosphorus-gold">
+            <span className="ml-2 inline-flex items-center gap-1 rounded-md bg-chichen-sky border border-chichen-sand/60 px-2 py-0.5 text-[11px] font-semibold text-chichen-gold">
               {selectedCategory}
               <button
                 type="button"
@@ -103,12 +103,12 @@ export default function BlogSearchGrid({
               id="sort-select"
               value={sortOrder}
               onChange={(e) => setSortOrder(e.target.value as "newest" | "oldest")}
-              className="appearance-none rounded-lg border border-bosphorus-sand/60 bg-white py-1.5 pl-3 pr-8 text-xs font-semibold text-bosphorus-navy shadow-sm transition hover:border-bosphorus-navy focus:border-bosphorus-navy focus:outline-none cursor-pointer"
+              className="appearance-none rounded-lg border border-chichen-sand/60 bg-white py-1.5 pl-3 pr-8 text-xs font-semibold text-chichen-navy shadow-sm transition hover:border-chichen-navy focus:border-chichen-navy focus:outline-none cursor-pointer"
             >
               <option value="newest">Newest First</option>
               <option value="oldest">Oldest First</option>
             </select>
-            <span className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-bosphorus-charcoal/60">
+            <span className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-chichen-charcoal/60">
               ▾
             </span>
           </div>
@@ -117,7 +117,7 @@ export default function BlogSearchGrid({
 
       {/* Grid */}
       {sortedPosts.length === 0 ? (
-        <div className="mt-8 rounded-2xl border border-dashed border-bosphorus-sand/60 p-12 text-center text-sm text-bosphorus-charcoal/60">
+        <div className="mt-8 rounded-2xl border border-dashed border-chichen-sand/60 p-12 text-center text-sm text-chichen-charcoal/60">
           No articles found matching your criteria.
         </div>
       ) : (
@@ -126,9 +126,9 @@ export default function BlogSearchGrid({
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-bosphorus-sand/60 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-bosphorus-gold/40 hover:shadow-lg"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-chichen-sand/60 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-chichen-gold/40 hover:shadow-lg"
             >
-              <div className="relative aspect-[16/10] overflow-hidden bg-bosphorus-navy">
+              <div className="relative aspect-[16/10] overflow-hidden bg-chichen-navy">
                 <SafeImage
                   src={post.image}
                   alt={post.imageAlt || post.title}
@@ -142,36 +142,36 @@ export default function BlogSearchGrid({
               <div className="flex flex-1 flex-col p-5">
                 {/* Category Pill */}
                 <div className="mb-2.5">
-                  <span className="inline-block rounded-md bg-bosphorus-sky border border-bosphorus-sand/60 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-bosphorus-gold">
+                  <span className="inline-block rounded-md bg-chichen-sky border border-chichen-sand/60 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-chichen-gold">
                     {post.category}
                   </span>
                 </div>
 
                 {/* Date and Read Time */}
-                <div className="flex items-center gap-3 text-[11px] font-medium text-bosphorus-charcoal/60">
+                <div className="flex items-center gap-3 text-[11px] font-medium text-chichen-charcoal/60">
                   <span className="inline-flex items-center gap-1">
-                    <CalendarIcon className="h-3.5 w-3.5 text-bosphorus-gold" />
+                    <CalendarIcon className="h-3.5 w-3.5 text-chichen-gold" />
                     {formatDate(post.date)}
                   </span>
                   <span className="inline-flex items-center gap-1">
-                    <ClockPayIcon className="h-3.5 w-3.5 text-bosphorus-gold" />
+                    <ClockPayIcon className="h-3.5 w-3.5 text-chichen-gold" />
                     {post.readTime}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h2 className="mt-2.5 line-clamp-2 font-display text-[15px] font-bold leading-snug text-bosphorus-navy transition-colors group-hover:text-bosphorus-gold">
+                <h2 className="mt-2.5 line-clamp-2 font-display text-[15px] font-bold leading-snug text-chichen-navy transition-colors group-hover:text-chichen-gold">
                   {post.title}
                 </h2>
 
                 {/* Excerpt */}
-                <p className="mt-2 line-clamp-2 flex-1 text-xs leading-relaxed text-bosphorus-charcoal/80">
+                <p className="mt-2 line-clamp-2 flex-1 text-xs leading-relaxed text-chichen-charcoal/80">
                   {post.excerpt}
                 </p>
 
                 {/* Read More link */}
-                <div className="mt-4 pt-2 border-t border-bosphorus-sand/60">
-                  <span className="inline-flex items-center gap-1 text-xs font-bold text-bosphorus-navy transition group-hover:text-bosphorus-gold">
+                <div className="mt-4 pt-2 border-t border-chichen-sand/60">
+                  <span className="inline-flex items-center gap-1 text-xs font-bold text-chichen-navy transition group-hover:text-chichen-gold">
                     Read More <span className="transition-transform group-hover:translate-x-1">→</span>
                   </span>
                 </div>
@@ -189,7 +189,7 @@ export default function BlogSearchGrid({
             onClick={() => goTo(currentPage - 1)}
             disabled={currentPage === 1}
             aria-label="Previous page"
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-bosphorus-sand/60 bg-white text-xs font-bold text-bosphorus-navy transition hover:border-bosphorus-navy disabled:opacity-30 disabled:hover:border-bosphorus-sand/60"
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-chichen-sand/60 bg-white text-xs font-bold text-chichen-navy transition hover:border-chichen-navy disabled:opacity-30 disabled:hover:border-chichen-sand/60"
           >
             ‹
           </button>
@@ -203,7 +203,7 @@ export default function BlogSearchGrid({
             ) {
               if (p === 2 || p === totalPages - 1) {
                 return (
-                  <span key={p} className="px-1 text-xs text-bosphorus-charcoal/60">
+                  <span key={p} className="px-1 text-xs text-chichen-charcoal/60">
                     ...
                   </span>
                 );
@@ -219,8 +219,8 @@ export default function BlogSearchGrid({
                 aria-current={p === currentPage ? "page" : undefined}
                 className={`flex h-9 w-9 items-center justify-center rounded-lg text-xs font-bold transition ${
                   p === currentPage
-                    ? "bg-bosphorus-navy text-white shadow-sm"
-                    : "border border-bosphorus-sand/60 bg-white text-bosphorus-navy hover:border-bosphorus-navy"
+                    ? "bg-chichen-navy text-white shadow-sm"
+                    : "border border-chichen-sand/60 bg-white text-chichen-navy hover:border-chichen-navy"
                 }`}
               >
                 {p}
@@ -233,7 +233,7 @@ export default function BlogSearchGrid({
             onClick={() => goTo(currentPage + 1)}
             disabled={currentPage === totalPages}
             aria-label="Next page"
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-bosphorus-sand/60 bg-white text-xs font-bold text-bosphorus-navy transition hover:border-bosphorus-navy disabled:opacity-30 disabled:hover:border-bosphorus-sand/60"
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-chichen-sand/60 bg-white text-xs font-bold text-chichen-navy transition hover:border-chichen-navy disabled:opacity-30 disabled:hover:border-chichen-sand/60"
           >
             ›
           </button>

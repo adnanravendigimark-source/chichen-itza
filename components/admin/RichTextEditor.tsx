@@ -714,7 +714,7 @@ export default function RichTextEditor({
       onClick={onClick}
       className={`rounded px-2.5 py-1 text-xs font-semibold transition ${
         active
-          ? "bg-bosphorus-navy text-white shadow-sm ring-1 ring-bosphorus-navy"
+          ? "bg-chichen-navy text-white shadow-sm ring-1 ring-chichen-navy"
           : "text-stone-600 hover:bg-stone-200 hover:text-stone-900"
       }`}
     >
@@ -745,7 +745,7 @@ export default function RichTextEditor({
   };
 
   return (
-    <div className="rounded-lg border border-stone-300 focus-within:border-bosphorus-navy focus-within:ring-1 focus-within:ring-bosphorus-navy">
+    <div className="rounded-lg border border-stone-300 focus-within:border-chichen-navy focus-within:ring-1 focus-within:ring-chichen-navy">
       <div
         className="sticky z-10 flex flex-wrap items-center justify-between gap-1 rounded-t-lg border-b border-stone-200 bg-stone-50 p-1.5"
         style={{ top: stickyOffset || 0 }}
@@ -823,7 +823,7 @@ export default function RichTextEditor({
 
         {/* Real-time Block Status Indicator Pill */}
         <div className="flex items-center gap-1.5 px-2 py-0.5 text-xs text-stone-500">
-          <span className="h-2 w-2 rounded-full bg-bosphorus-navy" />
+          <span className="h-2 w-2 rounded-full bg-chichen-navy" />
           <span>Current:</span>
           <span className="font-semibold text-stone-800">{getFormatLabel()}</span>
         </div>
@@ -841,7 +841,7 @@ export default function RichTextEditor({
         onPaste={handlePaste}
         data-placeholder={placeholder}
         data-rte-empty={isEmpty ? "true" : "false"}
-        className="rich-content max-w-none px-3 py-2.5 text-sm text-stone-900 outline-none [&_img]:cursor-pointer [&_img]:transition [&_img:hover]:ring-4 [&_img:hover]:ring-bosphorus-navy/40 [&_img:hover]:rounded-lg [&_figure]:cursor-pointer [&_figure:hover]:opacity-95"
+        className="rich-content max-w-none px-3 py-2.5 text-sm text-stone-900 outline-none [&_img]:cursor-pointer [&_img]:transition [&_img:hover]:ring-4 [&_img:hover]:ring-chichen-navy/40 [&_img:hover]:rounded-lg [&_figure]:cursor-pointer [&_figure:hover]:opacity-95"
         style={{ minHeight }}
       />
 

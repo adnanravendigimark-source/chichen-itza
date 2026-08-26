@@ -20,15 +20,15 @@ export default function TableOfContents({
 
   return (
     <div className="mt-8 rounded-2xl border border-stone-200 bg-stone-50 p-5">
-      <p className="text-xs font-semibold uppercase tracking-wider text-bosphorus-gold">{label}</p>
+      <p className="text-xs font-semibold uppercase tracking-wider text-chichen-gold">{label}</p>
       <ul className="mt-3 space-y-2 text-sm">
         {sections.map((item) => (
           <li key={item.id}>
             <a
               href={`#${item.id}`}
-              className="flex items-center gap-1.5 text-stone-700 transition hover:text-bosphorus-gold"
+              className="flex items-center gap-1.5 text-stone-700 transition hover:text-chichen-gold"
             >
-              <span aria-hidden="true" className="text-bosphorus-gold">
+              <span aria-hidden="true" className="text-chichen-gold">
                 ›
               </span>
               {item.text}

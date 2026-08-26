@@ -186,7 +186,7 @@ export default function IndexingManager({ initial }: { initial: IndexingRow[] })
                 type="button"
                 onClick={confirmChange}
                 disabled={applying}
-                className="rounded-lg bg-bosphorus-gold px-4 py-2 text-sm font-semibold text-white transition hover:bg-bosphorus-gold/90 disabled:opacity-60"
+                className="rounded-lg bg-chichen-gold px-4 py-2 text-sm font-semibold text-white transition hover:bg-chichen-gold/90 disabled:opacity-60"
               >
                 {applying ? "Saving…" : "Yes, change it"}
               </button>

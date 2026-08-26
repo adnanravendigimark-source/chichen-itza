@@ -105,27 +105,27 @@ export default async function Post({ params }: { params: { slug: string } }) {
         <div className="mx-auto max-w-6xl px-4 pt-24 sm:px-6 sm:pt-28">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-1 text-sm font-medium text-bosphorus-navy hover:text-bosphorus-gold transition-colors"
+            className="inline-flex items-center gap-1 text-sm font-medium text-chichen-navy hover:text-chichen-gold transition-colors"
           >
             {s.backToGuidesText}
           </Link>
 
           {/* Breadcrumbs */}
-          <nav aria-label="Breadcrumb" className="mt-3 text-xs font-medium text-bosphorus-charcoal/80">
+          <nav aria-label="Breadcrumb" className="mt-3 text-xs font-medium text-chichen-charcoal/80">
             <ol className="flex flex-wrap items-center gap-1.5">
               <li>
-                <Link href="/" className="hover:text-bosphorus-gold transition-colors">
+                <Link href="/" className="hover:text-chichen-gold transition-colors">
                   Home
                 </Link>
               </li>
-              <li className="text-bosphorus-charcoal/40">&gt;</li>
+              <li className="text-chichen-charcoal/40">&gt;</li>
               <li>
-                <Link href="/blog" className="hover:text-bosphorus-gold transition-colors">
+                <Link href="/blog" className="hover:text-chichen-gold transition-colors">
                   Blog
                 </Link>
               </li>
-              <li className="text-bosphorus-charcoal/40">&gt;</li>
-              <li className="font-semibold text-bosphorus-navy line-clamp-1" aria-current="page">
+              <li className="text-chichen-charcoal/40">&gt;</li>
+              <li className="font-semibold text-chichen-navy line-clamp-1" aria-current="page">
                 {post.title}
               </li>
             </ol>
@@ -133,34 +133,34 @@ export default async function Post({ params }: { params: { slug: string } }) {
 
           {/* Post Header */}
           <div className="mt-5">
-            <span className="inline-block rounded-md bg-white border border-bosphorus-sand/60 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-bosphorus-gold shadow-sm">
+            <span className="inline-block rounded-md bg-white border border-chichen-sand/60 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-chichen-gold shadow-sm">
               {post.category}
             </span>
 
-            <h1 className="mt-3.5 font-display text-3xl font-bold leading-tight text-bosphorus-navy sm:text-4xl lg:text-5xl">
+            <h1 className="mt-3.5 font-display text-3xl font-bold leading-tight text-chichen-navy sm:text-4xl lg:text-5xl">
               {post.title}
             </h1>
 
             {post.excerpt && (
-              <p className="mt-3.5 max-w-3xl text-sm leading-relaxed text-bosphorus-charcoal/80 sm:text-base">
+              <p className="mt-3.5 max-w-3xl text-sm leading-relaxed text-chichen-charcoal/80 sm:text-base">
                 {post.excerpt}
               </p>
             )}
 
             {/* Meta Row */}
-            <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-medium text-bosphorus-charcoal/80">
+            <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-medium text-chichen-charcoal/80">
               <span className="inline-flex items-center gap-1.5">
-                <CalendarIcon className="h-4 w-4 text-bosphorus-gold" />
+                <CalendarIcon className="h-4 w-4 text-chichen-gold" />
                 {formatDate(post.date)}
               </span>
               <span className="inline-flex items-center gap-1.5">
-                <ClockPayIcon className="h-4 w-4 text-bosphorus-gold" />
+                <ClockPayIcon className="h-4 w-4 text-chichen-gold" />
                 {post.readTime}
               </span>
             </div>
 
             {/* Hero Cover Image */}
-            <div className="relative mt-6 aspect-[16/9] sm:aspect-[21/10] w-full overflow-hidden rounded-2xl border border-bosphorus-sand/60 shadow-sm bg-bosphorus-navy">
+            <div className="relative mt-6 aspect-[16/9] sm:aspect-[21/10] w-full overflow-hidden rounded-2xl border border-chichen-sand/60 shadow-sm bg-chichen-navy">
               <SafeImage
                 src={post.image}
                 alt={post.imageAlt || post.title}
@@ -188,9 +188,9 @@ export default async function Post({ params }: { params: { slug: string } }) {
               />
 
               {/* Bottom Article CTA Card — admin-editable per post (PostForm → "Ready to book?" callout) */}
-              <div className="mt-12 flex flex-col items-center justify-between gap-5 rounded-2xl bg-bosphorus-navy p-6 text-center text-white sm:flex-row sm:text-left shadow-md border border-bosphorus-navy">
+              <div className="mt-12 flex flex-col items-center justify-between gap-5 rounded-2xl bg-chichen-navy p-6 text-center text-white sm:flex-row sm:text-left shadow-md border border-chichen-navy">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-bosphorus-gold border border-white/15 shadow-sm">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-chichen-gold border border-white/15 shadow-sm">
                     <TicketIcon className="h-6 w-6" />
                   </div>
                   <div>
@@ -205,7 +205,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
 
                 <a
                   href={post.ctaButtonHref}
-                  className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-bosphorus-gold px-5 py-2.5 text-xs font-bold text-white shadow-sm transition hover:opacity-90 hover:scale-[1.02]"
+                  className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-chichen-gold px-5 py-2.5 text-xs font-bold text-white shadow-sm transition hover:opacity-90 hover:scale-[1.02]"
                 >
                   {post.ctaButtonText}
                 </a>

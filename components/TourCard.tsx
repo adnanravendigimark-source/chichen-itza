@@ -21,7 +21,7 @@ export default function TourCard({
       className={`group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${
         recommended
           ? "border-2 border-gold-500 shadow-gold-500/10 hover:shadow-gold-500/20"
-          : "border border-stone-900/8 hover:shadow-bosphorus-charcoal/10"
+          : "border border-stone-900/8 hover:shadow-chichen-charcoal/10"
       }`}
     >
       {/* Image */}
@@ -70,7 +70,7 @@ export default function TourCard({
               key={item}
               className="flex items-start gap-2 rounded-md bg-stone-50 px-2.5 py-1.5 text-[11.5px] text-stone-900/80 border border-stone-100"
             >
-              <span className="mt-0.5 text-bosphorus-navy font-bold shrink-0">✓</span>
+              <span className="mt-0.5 text-chichen-navy font-bold shrink-0">✓</span>
               <span className="leading-tight font-medium line-clamp-1">{item}</span>
             </div>
           ))}

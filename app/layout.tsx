@@ -100,9 +100,9 @@ function buildThemeStyle(theme: { primary: string; secondary: string; dark: stri
     ["--color-maya-emerald", hexToRgbTriplet(theme.secondary)],
     ["--color-maya-charcoal", hexToRgbTriplet(theme.dark)],
     ["--color-gold-400", hexToRgbTriplet(theme.accent)],
-    ["--color-bosphorus-gold", hexToRgbTriplet(theme.primary)],
-    ["--color-bosphorus-navy", hexToRgbTriplet(theme.secondary)],
-    ["--color-bosphorus-charcoal", hexToRgbTriplet(theme.dark)],
+    ["--color-chichen-gold", hexToRgbTriplet(theme.primary)],
+    ["--color-chichen-navy", hexToRgbTriplet(theme.secondary)],
+    ["--color-chichen-charcoal", hexToRgbTriplet(theme.dark)],
   ];
   const declarations = vars
     .filter(([, value]) => value !== null)

@@ -22,10 +22,10 @@ export default async function TourGrid() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Section Header — admin-editable (Tour Grid section) */}
         <div className="text-center max-w-2xl mx-auto">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-bosphorus-gold">
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-chichen-gold">
             {s.eyebrow}
           </p>
-          <h2 className="mt-2.5 font-display text-3xl sm:text-[2.25rem] font-bold text-bosphorus-navy tracking-tight">
+          <h2 className="mt-2.5 font-display text-3xl sm:text-[2.25rem] font-bold text-chichen-navy tracking-tight">
             {s.heading}
           </h2>
           <p className="mt-2.5 text-xs sm:text-sm text-stone-900/80">
@@ -42,12 +42,12 @@ export default async function TourGrid() {
                 key={tour.id}
                 className={`group flex flex-col overflow-hidden rounded-2xl bg-white transition-all duration-300 hover:-translate-y-1 ${
                   isRecommended || tour.featured
-                    ? "border-2 border-bosphorus-gold shadow-lg shadow-bosphorus-gold/10 relative ring-1 ring-bosphorus-gold/20"
-                    : "border border-stone-200 shadow-sm hover:shadow-lg hover:border-bosphorus-gold/40"
+                    ? "border-2 border-chichen-gold shadow-lg shadow-chichen-gold/10 relative ring-1 ring-chichen-gold/20"
+                    : "border border-stone-200 shadow-sm hover:shadow-lg hover:border-chichen-gold/40"
                 }`}
               >
                 {/* Card Image & Overlay Badges */}
-                <div className="relative aspect-[16/9.5] w-full overflow-hidden bg-bosphorus-navy">
+                <div className="relative aspect-[16/9.5] w-full overflow-hidden bg-chichen-navy">
                   <SafeImage
                     src={tour.image}
                     alt={tour.imageAlt}
@@ -60,14 +60,14 @@ export default async function TourGrid() {
                   {/* Ribbon Badge — Recommended Tour badge takes priority over the
                       tour's own ribbon text when this is the admin-picked tour */}
                   {(isRecommended || tour.ribbon) && (
-                    <div className="absolute top-3 left-3 z-10 inline-flex items-center gap-1 rounded-md bg-bosphorus-gold px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-md">
+                    <div className="absolute top-3 left-3 z-10 inline-flex items-center gap-1 rounded-md bg-chichen-gold px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-md">
                       <span>👑</span>
                       <span>{isRecommended ? (homepage.featuredBadgeLabel || "Recommended") : tour.ribbon}</span>
                     </div>
                   )}
 
                   {/* Rating Badge Floating Bottom Left */}
-                  <div className="absolute bottom-2.5 left-2.5 z-10 inline-flex items-center gap-1 rounded-md bg-white/95 backdrop-blur-md px-2.5 py-1 text-[11px] font-bold text-bosphorus-navy shadow-sm">
+                  <div className="absolute bottom-2.5 left-2.5 z-10 inline-flex items-center gap-1 rounded-md bg-white/95 backdrop-blur-md px-2.5 py-1 text-[11px] font-bold text-chichen-navy shadow-sm">
                     <StarRating rating={tour.rating} showValue reviewCount={tour.reviews} size="xs" />
                   </div>
                 </div>
@@ -75,7 +75,7 @@ export default async function TourGrid() {
                 {/* Card Body */}
                 <div className="flex flex-1 flex-col p-5">
                   {/* Title */}
-                  <h3 className="font-display text-[15px] sm:text-base font-bold text-bosphorus-navy leading-snug group-hover:text-bosphorus-gold transition-colors line-clamp-2 min-h-[44px]">
+                  <h3 className="font-display text-[15px] sm:text-base font-bold text-chichen-navy leading-snug group-hover:text-chichen-gold transition-colors line-clamp-2 min-h-[44px]">
                     <a href={tour.href} target="_blank" rel="noopener nofollow sponsored">
                       {tour.title}
                     </a>
@@ -95,7 +95,7 @@ export default async function TourGrid() {
                           key={idx}
                           className="flex items-start gap-2 rounded-md bg-stone-50 px-2.5 py-1.5 text-[11.5px] text-stone-900 border border-stone-100"
                         >
-                          <span className="mt-0.5 text-bosphorus-navy font-bold shrink-0">✓</span>
+                          <span className="mt-0.5 text-chichen-navy font-bold shrink-0">✓</span>
                           <span className="leading-tight font-medium line-clamp-1">{feat}</span>
                         </div>
                       ))}
@@ -121,7 +121,7 @@ export default async function TourGrid() {
                           {tour.originalPrice && (
                             <span className="text-xs text-stone-900/35 line-through">€{tour.originalPrice}</span>
                           )}
-                          <span className="font-display text-xl sm:text-2xl font-bold text-bosphorus-navy">
+                          <span className="font-display text-xl sm:text-2xl font-bold text-chichen-navy">
                             €{tour.price}
                           </span>
                           <span className="text-[11px] text-stone-900/70">/person</span>
@@ -132,13 +132,13 @@ export default async function TourGrid() {
                         href={tour.href}
                         target="_blank"
                         rel="noopener nofollow sponsored"
-                        className="inline-flex items-center justify-center rounded-lg bg-bosphorus-navy px-5 py-2.5 text-xs font-bold text-white shadow-sm transition-all hover:bg-bosphorus-navy/90 hover:shadow-md"
+                        className="inline-flex items-center justify-center rounded-lg bg-chichen-navy px-5 py-2.5 text-xs font-bold text-white shadow-sm transition-all hover:bg-chichen-navy/90 hover:shadow-md"
                       >
                         {bookNowText}
                       </a>
                     </div>
                     {isRecommended && homepage.featuredUrgencyText && (
-                      <p className="mt-2.5 flex items-center gap-1 text-[11px] font-semibold text-bosphorus-gold">
+                      <p className="mt-2.5 flex items-center gap-1 text-[11px] font-semibold text-chichen-gold">
                         <LockIcon className="h-3 w-3" /> {homepage.featuredUrgencyText}
                       </p>
                     )}

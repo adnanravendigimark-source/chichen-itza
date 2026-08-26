@@ -12,12 +12,12 @@ export default function TourPromoCard({
   bookNowText?: string;
 }) {
   return (
-    <div className="my-8 flex flex-col gap-5 overflow-hidden rounded-2xl border border-bosphorus-navy/20 bg-bosphorus-navy/5 p-5 sm:flex-row sm:items-center">
+    <div className="my-8 flex flex-col gap-5 overflow-hidden rounded-2xl border border-chichen-navy/20 bg-chichen-navy/5 p-5 sm:flex-row sm:items-center">
       <div className="relative h-40 w-full shrink-0 overflow-hidden rounded-xl sm:h-28 sm:w-40">
         <SafeImage src={tour.image} alt={tour.imageAlt} fill sizes="200px" className="object-cover" />
       </div>
       <div className="flex-1">
-        <p className="text-xs font-semibold uppercase tracking-wider text-bosphorus-navy">{recommendedLabel}</p>
+        <p className="text-xs font-semibold uppercase tracking-wider text-chichen-navy">{recommendedLabel}</p>
         <p className="mt-1 font-display text-base font-semibold text-stone-900">{tour.title}</p>
         <div className="mt-1 flex items-center gap-2 text-xs text-stone-900/60">
           <StarRating rating={tour.rating} showValue reviewCount={tour.reviews} size="xs" />
