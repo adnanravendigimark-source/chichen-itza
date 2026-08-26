@@ -107,12 +107,14 @@ function rowToTour(row: any): TourRecord {
 export async function getToursRaw(): Promise<TourRecord[]> {
   try {
     const rows = await sql`SELECT * FROM tours ORDER BY sort_order ASC, id ASC`;
-    if (rows.length) return rows.map(rowToTour);
-    // Empty/unreachable table — DATABASE_URL not set yet, or
-    // `node scripts/setup-db.mjs` hasn't been run. Fall back to the real
-    // starter tours baked into /data so the site is never blank.
-    return toursSeed as TourRecord[];
+    return rows.map(rowToTour);
   } catch {
+    // DB unreachable (e.g. DATABASE_URL not set yet, or before
+    // `node scripts/setup-db.mjs` has ever connected) — fall back to the
+    // real starter tours baked into /data so the site is never blank. An
+    // empty table is a valid, intentional state (admin deleted every tour)
+    // and must NOT fall back here, or deleting the last tour would make it
+    // reappear on the next page load.
     return toursSeed as TourRecord[];
   }
 }
@@ -187,9 +189,11 @@ export interface FAQ {
 export async function getFaqs(): Promise<FAQ[]> {
   try {
     const rows = await sql`SELECT question, answer FROM faqs ORDER BY sort_order ASC, id ASC`;
-    if (rows.length) return rows.map((r: any) => ({ question: r.question, answer: r.answer }));
-    return faqsSeed as FAQ[];
+    return rows.map((r: any) => ({ question: r.question, answer: r.answer }));
   } catch {
+    // DB unreachable — fall back to seed content. An empty table is a
+    // valid, intentional state (admin deleted every FAQ) and must NOT
+    // fall back here, or deleting the last FAQ would make it reappear.
     return faqsSeed as FAQ[];
   }
 }
