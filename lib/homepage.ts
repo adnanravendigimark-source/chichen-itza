@@ -195,7 +195,6 @@ export interface HomepageContent {
   heroSubheading: string;
   heroImage: string;
   heroImageAlt: string;
-  heroGallery: GalleryImage[];
   heroCtaPrimaryText: string;
   heroCtaPrimaryHref: string;
   heroCtaSecondaryText: string;
@@ -278,29 +277,6 @@ export const DEFAULT_THEME: ThemeColors = {
   dark: "#073B2A",      // Mayan Forest Green
   accent: "#145A43",    // Jungle Green
 };
-
-export const DEFAULT_GALLERY: GalleryImage[] = [
-  {
-    src: "/images/chichen-itza-hero.jpg",
-    alt: "El Castillo Pyramid of Kukulkan at Chichen Itza Mayan ruins",
-    label: "El Castillo Pyramid",
-  },
-  {
-    src: "/images/warriors-temple.jpg",
-    alt: "Temple of the Warriors and Thousand Columns at Chichen Itza",
-    label: "Temple of Warriors",
-  },
-  {
-    src: "/images/cenote-ik-kil.jpg",
-    alt: "Cenote Ik Kil with hanging tropical vines near Chichen Itza",
-    label: "Cenote Ik Kil",
-  },
-  {
-    src: "/images/great-ball-court.jpg",
-    alt: "The Great Ball Court at Chichen Itza",
-    label: "Great Ball Court",
-  },
-];
 
 export const DEFAULT_SECTIONS: HomepageSections = {
   tours: {
@@ -487,7 +463,6 @@ const DEFAULT_HOMEPAGE_CONTENT: HomepageContent = {
     "Discover the ancient marvel of Chichen Itza with expert local guides and unforgettable experiences.",
   heroImage: "/images/chichen-itza-hero.jpg",
   heroImageAlt: "The iconic El Castillo pyramid at Chichen Itza Mayan ruins in sunny Yucatan",
-  heroGallery: DEFAULT_GALLERY,
   heroCtaPrimaryText: "EXPLORE TOURS",
   heroCtaPrimaryHref: "#tours",
   heroCtaSecondaryText: "VIEW PRIVATE TOURS",
@@ -552,10 +527,6 @@ function rowToHomepage(row: any): HomepageContent {
     heroSubheading: row.hero_subheading || "",
     heroImage: row.hero_image || "",
     heroImageAlt: row.hero_image_alt || "",
-    heroGallery: (() => {
-      const g = parseReasons(row.hero_gallery);
-      return g.length ? (g as unknown as GalleryImage[]) : DEFAULT_GALLERY;
-    })(),
     heroCtaPrimaryText: row.hero_cta_primary_text || DEFAULT_HOMEPAGE_CONTENT.heroCtaPrimaryText,
     heroCtaPrimaryHref: row.hero_cta_primary_href || DEFAULT_HOMEPAGE_CONTENT.heroCtaPrimaryHref,
     heroCtaSecondaryText: row.hero_cta_secondary_text || DEFAULT_HOMEPAGE_CONTENT.heroCtaSecondaryText,
@@ -625,7 +596,6 @@ export async function saveHomepageCopy(data: {
   heroSubheading: string;
   heroImage: string;
   heroImageAlt: string;
-  heroGallery: GalleryImage[];
   heroCtaPrimaryText: string;
   heroCtaPrimaryHref: string;
   heroCtaSecondaryText: string;
@@ -643,13 +613,13 @@ export async function saveHomepageCopy(data: {
   await sql`
     INSERT INTO homepage (
       id, hero_badge, hero_heading, hero_subheading, hero_image, hero_image_alt,
-      hero_gallery, hero_cta_primary_text, hero_cta_primary_href,
+      hero_cta_primary_text, hero_cta_primary_href,
       hero_cta_secondary_text, hero_cta_secondary_href,
       rating_value, rating_count, meta_title, meta_description, focus_keyword,
       canonical_url, og_title, og_description, og_image
     ) VALUES (
       1, ${data.heroBadge}, ${data.heroHeading}, ${data.heroSubheading}, ${data.heroImage},
-      ${data.heroImageAlt}, ${JSON.stringify(data.heroGallery || [])}::jsonb,
+      ${data.heroImageAlt},
       ${data.heroCtaPrimaryText || ""}, ${data.heroCtaPrimaryHref || ""},
       ${data.heroCtaSecondaryText || ""}, ${data.heroCtaSecondaryHref || ""},
       ${data.ratingValue}, ${data.ratingCount},
@@ -662,7 +632,6 @@ export async function saveHomepageCopy(data: {
       hero_subheading = EXCLUDED.hero_subheading,
       hero_image = EXCLUDED.hero_image,
       hero_image_alt = EXCLUDED.hero_image_alt,
-      hero_gallery = EXCLUDED.hero_gallery,
       hero_cta_primary_text = EXCLUDED.hero_cta_primary_text,
       hero_cta_primary_href = EXCLUDED.hero_cta_primary_href,
       hero_cta_secondary_text = EXCLUDED.hero_cta_secondary_text,
