@@ -471,9 +471,13 @@ export default function PostForm({
             </SectionCard>
           </div>
         )}
-      </div>
 
-      <div className="mx-auto max-w-4xl">
+        {/* Lives inside this same tall space-y-5 column (not a separate
+            sibling div) so its `sticky bottom-0` actually has room to work —
+            a sticky element can only float within the bounds of its own
+            containing block, and a wrapper with no other content is exactly
+            as tall as the bar itself, leaving it nowhere to stick until the
+            very end of the page. */}
         <SaveBar
           saving={saving}
           disabled={!dirty}

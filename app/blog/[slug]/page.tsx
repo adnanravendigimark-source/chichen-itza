@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import { notFound, permanentRedirect } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -21,6 +22,22 @@ import { extractTableOfContents } from "@/lib/tableOfContents";
 // slightly more custom keyword targeting in their metadata — new posts
 // added later are served here automatically).
 export const dynamic = "force-dynamic";
+
+// Blog-only font pairing, matching the amsterdam-boat-tours article page —
+// Outfit for headings, Plus Jakarta Sans for body copy. Loaded here (rather
+// than in the root layout) and applied only inside this page's <main> below,
+// so it overrides the site's usual Cormorant Garamond serif branding just
+// for the article itself, without touching the header, homepage, or any
+// other page.
+const blogDisplayFont = Outfit({
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800", "900"],
+});
+
+const blogBodyFont = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export async function generateMetadata({
   params,
@@ -101,7 +118,13 @@ export default async function Post({ params }: { params: { slug: string } }) {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-white">
+      <main
+        className="min-h-screen bg-white font-body"
+        style={{
+          ["--font-display" as string]: blogDisplayFont.style.fontFamily,
+          ["--font-body" as string]: blogBodyFont.style.fontFamily,
+        }}
+      >
         <div className="mx-auto max-w-6xl px-4 pt-24 sm:px-6 sm:pt-28">
           <Link
             href="/blog"
