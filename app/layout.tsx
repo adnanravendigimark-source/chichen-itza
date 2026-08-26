@@ -25,6 +25,9 @@ const scriptFont = Alex_Brush({
 const DEFAULT_OG_IMAGE =
   "https://images.unsplash.com/photo-1518638150340-f706e86654de?q=80&w=2400&auto=format&fit=crop";
 
+// Google Analytics (GA4) measurement ID.
+const GA_MEASUREMENT_ID = "G-YFP0RWYX4J";
+
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -122,9 +125,18 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${displayFont.variable} ${scriptFont.variable}`}>
       <head>
+        {/* Warms up the connection to Google's analytics domains ahead of
+            the afterInteractive gtag.js load below, shaving the DNS/TLS
+            handshake off its actual request instead of paying for it when
+            the script fires. */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        {/* Google tag (gtag.js) */}
         <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -132,8 +144,7 @@ export default async function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
-            gtag('config', 'G-XXXXXXXXXX');
+            gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
       </head>
