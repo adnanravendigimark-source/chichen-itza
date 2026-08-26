@@ -76,7 +76,7 @@ export interface Post {
 }
 
 const DEFAULT_CTA_HEADING = "Ready to book?";
-const DEFAULT_CTA_BODY = "Compare cruise prices and tickets on the homepage.";
+const DEFAULT_CTA_BODY = "Compare tour prices and tickets on the homepage.";
 const DEFAULT_CTA_BUTTON_TEXT = "See Price Comparison";
 const DEFAULT_CTA_BUTTON_HREF = "/#prices";
 

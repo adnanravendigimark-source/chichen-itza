@@ -126,7 +126,7 @@ export default function BlogSidebar({
           Compare Chichen Itza Tours &amp; Tickets
         </p>
         <p className="mt-1.5 text-xs leading-relaxed text-white/80">
-          Find the best cruise options, departure times and prices in one place.
+          Find the best tour options, departure times and prices in one place.
         </p>
         <a
           href="/#tours"

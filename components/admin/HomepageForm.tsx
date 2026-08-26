@@ -536,7 +536,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
             <Field label="Small note under the bullets">
               <textarea rows={2} value={content.sections.why.note} onChange={(e) => updateWhy({ note: e.target.value })} className={inputClass} />
             </Field>
-            <Field label="Optional 3rd list heading" hint="Leave blank and empty to hide this block entirely — e.g. a “Where you can board” list for a cruise site.">
+            <Field label="Optional 3rd list heading" hint="Leave blank and empty to hide this block entirely — e.g. a “What to bring” list for a tour site.">
               <input value={content.sections.why.extraHeading} onChange={(e) => updateWhy({ extraHeading: e.target.value })} className={inputClass} />
             </Field>
             <Field label="Optional 3rd list items">
@@ -668,7 +668,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
               <RichTextEditor value={content.sections.price.subheading} onChange={(html) => updatePrice({ subheading: html })} minHeight="4rem" />
             </Field>
             <div className="grid gap-5 sm:grid-cols-2">
-              <Field label="Column: item name" hint='e.g. "Cruise Type"'>
+              <Field label="Column: item name" hint='e.g. "Tour Type"'>
                 <input value={content.sections.price.itemLabel} onChange={(e) => updatePrice({ itemLabel: e.target.value })} className={inputClass} />
               </Field>
               <Field label="Column: price" hint='e.g. "Price"'>
@@ -858,7 +858,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
               <Field label="Related Articles heading">
                 <input value={content.sections.blogPage.sidebarRelatedHeading} onChange={(e) => updateBlogPage({ sidebarRelatedHeading: e.target.value })} className={inputClass} />
               </Field>
-              <Field label="Compare-all-cruises link text">
+              <Field label="Compare-all-tours link text">
                 <input value={content.sections.blogPage.sidebarCompareLinkText} onChange={(e) => updateBlogPage({ sidebarCompareLinkText: e.target.value })} className={inputClass} />
               </Field>
               <Field label={'Mid-article promo card "Recommended for you" label'}>

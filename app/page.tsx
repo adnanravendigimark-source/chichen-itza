@@ -42,7 +42,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function HomePage() {
-  // Product structured data for the featured cruises — makes them eligible
+  // Product structured data for the featured tours — makes them eligible
   // for star-rating rich results in search.
   const tours = await getTours();
   const productJsonLd = tours

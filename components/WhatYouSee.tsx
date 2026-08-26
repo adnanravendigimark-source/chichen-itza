@@ -23,7 +23,7 @@ export default async function WhatYouSee() {
           />
         </div>
 
-        {/* Sample cruise route timeline + what-you'll-notice list — admin-editable */}
+        {/* Sample tour timeline + what-you'll-notice list — admin-editable */}
         <div className="mt-16 grid gap-8 lg:grid-cols-2 lg:items-start">
           <div className="rounded-2xl border border-stone-200 bg-stone-50/60 p-7 shadow-sm">
             <h3 className="font-display text-lg sm:text-xl font-bold text-chichen-navy">{s.timelineHeading}</h3>

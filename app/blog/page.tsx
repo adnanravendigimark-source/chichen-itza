@@ -96,7 +96,7 @@ export default async function BlogIndexPage() {
           posts={posts}
           emptyStateText={s.emptyStateText}
           ctaHeading={s.ctaHeading}
-          ctaBody="Best cruise prices, instant confirmation, and free cancellation on most tickets."
+          ctaBody="Best tour prices, instant confirmation, and free cancellation on most tickets."
           ctaButtonText={s.ctaButtonText}
         />
       </main>
