@@ -6,7 +6,7 @@ export default async function Hero() {
   const heroImageSrc = content.heroImage || "/images/chichen-itza-hero.jpg";
 
   return (
-    <section className="relative w-full min-h-[calc(100vh-5rem)] min-h-[calc(100dvh-5rem)] flex flex-col justify-center bg-[#F8F5EC] overflow-hidden">
+    <section className="relative w-full min-h-screen min-h-[100dvh] flex flex-col justify-center bg-[#F8F5EC] overflow-hidden">
       {/* Full-bleed Panoramic Background Image */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <SafeImage
@@ -23,7 +23,7 @@ export default async function Hero() {
       </div>
 
       {/* Hero Content Layer */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-8 py-16 sm:py-20 lg:py-28 flex-1 flex flex-col justify-center">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-8 pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-20 lg:pb-28 flex-1 flex flex-col justify-center">
         <div className="max-w-xl lg:max-w-2xl">
           {/* Eyebrow in Mayan Gold */}
           <p className="text-xs sm:text-[13px] font-bold tracking-[0.2em] uppercase text-[#C58A2B]">

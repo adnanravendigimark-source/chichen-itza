@@ -33,7 +33,7 @@ export default async function ContactPage() {
   return (
     <>
       <Header />
-      <main className="bg-bosphorus-ivory min-h-screen py-16 sm:py-24">
+      <main className="bg-bosphorus-ivory min-h-screen pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <div className="text-center">
             <span className="inline-block rounded-md bg-white border border-bosphorus-sand/60 px-3 py-1 text-xs font-bold uppercase tracking-wider text-bosphorus-gold shadow-sm">
