@@ -639,7 +639,7 @@ async function seedAboutPage() {
       "We built this site around one belief: visiting Chichén Itzá is one of the most breathtaking cultural experiences in the world — but only if you book the right tour. With hundreds of operators in Cancun and Riviera Maya, prices and service quality vary dramatically.",
     introParagraph2:
       "We're an independent Chichen Itza tour guide — not an official government website. We compare day tours and early access tickets from licensed, established Yucatan operators, currently via GetYourGuide, and point you to the ones worth your time and money.",
-    introImage: "https://images.unsplash.com/photo-1608889825103-eb5ed706fc64?q=80&w=1000&auto=format&fit=crop",
+    introImage: "https://images.unsplash.com/photo-1688330393243-b7d7bc9cd3d7?q=80&w=1000&auto=format&fit=crop",
     introImageAlt: "Temple of the Warriors and columns at Chichen Itza",
     reasonsHeading: "How We Pick Our Chichen Itza Tours",
     reasonsSubheading: "Every tour listed on this site is screened against four criteria before it earns a spot.",
