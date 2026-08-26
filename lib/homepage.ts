@@ -199,8 +199,6 @@ export interface HomepageContent {
   heroCtaPrimaryHref: string;
   heroCtaSecondaryText: string;
   heroCtaSecondaryHref: string;
-  ratingValue: string;
-  ratingCount: string;
   showFeaturedTour: boolean;
   featuredTourId: string;
   featuredBadgeLabel: string;
@@ -467,8 +465,6 @@ const DEFAULT_HOMEPAGE_CONTENT: HomepageContent = {
   heroCtaPrimaryHref: "#tours",
   heroCtaSecondaryText: "VIEW PRIVATE TOURS",
   heroCtaSecondaryHref: "#tours",
-  ratingValue: "4.9 / 5",
-  ratingCount: "24,890+ verified reviews",
   showFeaturedTour: true,
   featuredTourId: "chichen-itza-cenote-valladolid-all-inclusive-tour",
   featuredBadgeLabel: "Recommended",
@@ -531,8 +527,6 @@ function rowToHomepage(row: any): HomepageContent {
     heroCtaPrimaryHref: row.hero_cta_primary_href || DEFAULT_HOMEPAGE_CONTENT.heroCtaPrimaryHref,
     heroCtaSecondaryText: row.hero_cta_secondary_text || DEFAULT_HOMEPAGE_CONTENT.heroCtaSecondaryText,
     heroCtaSecondaryHref: row.hero_cta_secondary_href || DEFAULT_HOMEPAGE_CONTENT.heroCtaSecondaryHref,
-    ratingValue: row.rating_value || "",
-    ratingCount: row.rating_count || "",
     showFeaturedTour: !!row.show_featured_tour,
     featuredTourId: row.featured_tour_id || "",
     featuredBadgeLabel: row.featured_badge_label || "",
@@ -600,8 +594,6 @@ export async function saveHomepageCopy(data: {
   heroCtaPrimaryHref: string;
   heroCtaSecondaryText: string;
   heroCtaSecondaryHref: string;
-  ratingValue: string;
-  ratingCount: string;
   metaTitle: string;
   metaDescription: string;
   focusKeyword: string;
@@ -615,14 +607,13 @@ export async function saveHomepageCopy(data: {
       id, hero_badge, hero_heading, hero_subheading, hero_image, hero_image_alt,
       hero_cta_primary_text, hero_cta_primary_href,
       hero_cta_secondary_text, hero_cta_secondary_href,
-      rating_value, rating_count, meta_title, meta_description, focus_keyword,
+      meta_title, meta_description, focus_keyword,
       canonical_url, og_title, og_description, og_image
     ) VALUES (
       1, ${data.heroBadge}, ${data.heroHeading}, ${data.heroSubheading}, ${data.heroImage},
       ${data.heroImageAlt},
       ${data.heroCtaPrimaryText || ""}, ${data.heroCtaPrimaryHref || ""},
       ${data.heroCtaSecondaryText || ""}, ${data.heroCtaSecondaryHref || ""},
-      ${data.ratingValue}, ${data.ratingCount},
       ${data.metaTitle || ""}, ${data.metaDescription || ""}, ${data.focusKeyword || ""},
       ${data.canonicalUrl || ""}, ${data.ogTitle || ""}, ${data.ogDescription || ""}, ${data.ogImage || ""}
     )
@@ -636,8 +627,6 @@ export async function saveHomepageCopy(data: {
       hero_cta_primary_href = EXCLUDED.hero_cta_primary_href,
       hero_cta_secondary_text = EXCLUDED.hero_cta_secondary_text,
       hero_cta_secondary_href = EXCLUDED.hero_cta_secondary_href,
-      rating_value = EXCLUDED.rating_value,
-      rating_count = EXCLUDED.rating_count,
       meta_title = EXCLUDED.meta_title,
       meta_description = EXCLUDED.meta_description,
       focus_keyword = EXCLUDED.focus_keyword,
