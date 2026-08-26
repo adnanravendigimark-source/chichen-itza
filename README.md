@@ -82,7 +82,7 @@ them — nothing beats real photos of the actual experience.
 A few placeholders need your own real values before this goes live:
 
 - `lib/site.ts` → `SITE_URL` — set to whatever domain you actually connect
-  in Vercel (currently set to `chichenitzatour.com`).
+  in Vercel (currently set to `bookchichenitzatour.com`).
 - `app/layout.tsx` → the `G-XXXXXXXXXX` Google Analytics ID (two spots) —
   replace with this site's own GA4 measurement ID. Don't reuse another
   site's ID, or you'll mix both sites' traffic together.
