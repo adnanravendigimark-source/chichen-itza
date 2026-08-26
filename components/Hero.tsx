@@ -41,7 +41,7 @@ export default async function Hero() {
           </p>
 
           {/* Subtitle / Description */}
-          <p className="mt-3.5 text-base sm:text-lg text-[#26332D]/90 leading-relaxed max-w-xl font-normal">
+          <p className="mt-3.5 text-base sm:text-lg lg:text-[19px] text-[#11261D] font-semibold leading-relaxed max-w-xl">
             {content.heroSubheading
               ? content.heroSubheading.replace(/<[^>]+>/g, " ")
               : "Discover the ancient marvel of Chichen Itza with expert local guides and unforgettable experiences."}
