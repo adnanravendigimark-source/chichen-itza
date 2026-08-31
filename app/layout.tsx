@@ -26,7 +26,7 @@ const DEFAULT_OG_IMAGE =
   "https://images.unsplash.com/photo-1518638150340-f706e86654de?q=80&w=2400&auto=format&fit=crop";
 
 // Google Analytics (GA4) measurement ID.
-const GA_MEASUREMENT_ID = "G-YFP0RWYX4J";
+const GA_MEASUREMENT_ID = "G-62ECJTNL1Q";
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
